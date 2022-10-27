@@ -39,4 +39,62 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+const links = document.querySelectorAll('header nav a')
+const lt = Object.values(siteContent.nav)
+links.forEach((link, index) => {
+link.textContent = lt[index]
+link.classList.add('italic')
+})
+
+
+
+
+//////////////////////////////
+const img1 = document.querySelector('#logo-img')
+img1.src = siteContent.images['logo-img']
+
+const img2 = document.querySelector('#cta-img')
+img2.src = siteContent.images['cta-img']
+
+const img3 = document.querySelector('#middle-img')
+img3.src = siteContent.images['accent-img']
+
+///////////////////////////
+
+const txt2 = document.querySelector('h1')
+txt2.textContent = 'DOM Is Awesome'
+
+const b1 = document.querySelector('button')
+b1.textContent = 'Get Started'
+
+//////////////////////////////////
+
+const contact = document.querySelector('section.contact')
+contact.querySelector('h4').textContent = ' Contact'
+contact.children[1].textContent = siteContent.contact['address']
+contact.children[2].textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
+
+const foot = document.querySelector('footer a')
+foot.textContent = siteContent.footer.copyright
+foot.classList.add('bold')
+
+/////////////////////////////
+const topcontent = document.querySelector('.top-content')
+topcontent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topcontent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topcontent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topcontent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+const bottomcontent = document.querySelector('.bottom-content')
+bottomcontent.children[0].children[0].textContent = siteContent['main-content']['services-h4']
+bottomcontent.children[0].children[1].textContent = siteContent['main-content']['services-content']
+bottomcontent.children[1].children[0].textContent = siteContent['main-content']['product-h4']
+bottomcontent.children[1].children[1].textContent = siteContent['main-content']['product-content']
+bottomcontent.children[2].children[0].textContent = siteContent['main-content']['vision-h4']
+bottomcontent.children[2].children[1].textContent = siteContent['main-content']['vision-content']
+
+
+
+
+
